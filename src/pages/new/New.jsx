@@ -1,4 +1,4 @@
-import "./single.scss"
+import "./new.scss"
 
 export const New = () => {
   return (
