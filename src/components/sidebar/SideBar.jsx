@@ -1,18 +1,21 @@
 import "./sidebar.scss";
-import DashboardIcon from "@mui/icons-material/Dashboard";
-import PersonIcon from "@mui/icons-material/Person";
-import LocalShippingIcon from "@mui/icons-material/LocalShipping";
-import CreditCardIcon from "@mui/icons-material/CreditCard";
-import StoreIcon from "@mui/icons-material/Store";
-import InsertChartIcon from "@mui/icons-material/InsertChart";
-import SettingsApplicationsIcon from "@mui/icons-material/SettingsApplications";
-import ExitToAppIcon from "@mui/icons-material/ExitToApp";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import SettingsSystemDaydreamOutlinedIcon from "@mui/icons-material/SettingsSystemDaydreamOutlined";
-import PsychologyOutlinedIcon from "@mui/icons-material/PsychologyOutlined";
-import AccountCircleOutlinedIcon from "@mui/icons-material/AccountCircleOutlined";
-import DarkModeIcon from '@mui/icons-material/DarkMode';
-import LightModeIcon from '@mui/icons-material/LightMode';
+import {
+  Dashboard,
+  Person,
+  LocalShipping,
+  CreditCard,
+  Store,
+  InsertChart,
+  SettingsApplications,
+  ExitToApp,
+  NotificationsNone,
+  SettingsSystemDaydreamOutlined,
+  PsychologyOutlined,
+  AccountCircleOutlined,
+  DarkMode,
+  LightMode
+
+} from "@mui/icons-material";
 export const SideBar = () => {
   return (
     <div className="sidebar">
@@ -24,62 +27,66 @@ export const SideBar = () => {
         <ul>
           <p className="title">MAIN</p>
           <li>
-            <DashboardIcon className="icon" />
+            <Dashboard className="icon" />
             <span>Dashboard</span>
           </li>
           <p className="title">LISTS</p>
           <li>
-            <PersonIcon className="icon" />
+            <Person className="icon" />
             <span>Users</span>
           </li>
           <li>
-            <StoreIcon className="icon" />
+            <Store className="icon" />
             <span>Products</span>
           </li>
           <li>
-            <CreditCardIcon className="icon" />
+            <CreditCard className="icon" />
             <span>Orders</span>
           </li>
           <li>
-            <LocalShippingIcon className="icon" />
+            <LocalShipping className="icon" />
             <span>Delivery</span>
           </li>
           <p className="title">USEFUL</p>
           <li>
-            <InsertChartIcon className="icon" />
+            <InsertChart className="icon" />
             <span>Stats</span>
           </li>
           <li>
-            <NotificationsNoneIcon className="icon" />
+            <NotificationsNone className="icon" />
             <span>Notifications</span>
           </li>
           <p className="title">SERVICE</p>
           <li>
-            <SettingsSystemDaydreamOutlinedIcon className="icon" />
+            <SettingsSystemDaydreamOutlined className="icon" />
             <span>System health</span>
           </li>
           <li>
-            <PsychologyOutlinedIcon className="icon" />
+            <PsychologyOutlined className="icon" />
             <span>Logs</span>
           </li>
           <li>
-            <SettingsApplicationsIcon className="icon" />
+            <SettingsApplications className="icon" />
             <span>Settings</span>
           </li>
           <p className="title">USER</p>
           <li>
-            <AccountCircleOutlinedIcon className="icon" />
+            <AccountCircleOutlined className="icon" />
             <span>Profile</span>
           </li>
           <li>
-            <ExitToAppIcon className="icon" />
+            <ExitToApp className="icon" />
             <span>Logout</span>
           </li>
         </ul>
       </div>
       <div className="bottom">
-        <div className="colorOption"><DarkModeIcon/></div>
-        <div className="colorOption"><LightModeIcon/></div>
+        <div className="colorOption">
+          <DarkMode />
+        </div>
+        <div className="colorOption">
+          <LightMode />
+        </div>
       </div>
     </div>
   );
