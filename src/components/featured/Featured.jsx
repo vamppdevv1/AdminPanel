@@ -11,7 +11,7 @@ export const Featured = () => {
       </div>
       <div className="bottom">
         <div className="featuredChart">
-          <CircularProgressbar value={70} text={"70%"} />
+          <CircularProgressbar value={67} text={"67%"} />
         </div>
         <p className="title">Total sales made today</p>
         <p className="amount">$420</p>
