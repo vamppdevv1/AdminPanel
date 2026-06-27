@@ -19,7 +19,7 @@ export const Home = () => {
         </div>
         <div className="charts">
           <Featured />
-          <Chart />
+          <Chart aspect={1.6} title="Last 6 Months (Revenue)" />
         </div>
         <div className="listContainer">
           <div className="listTitle">Latest Transactions</div>
