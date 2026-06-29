@@ -1,8 +1,8 @@
 import "./single.scss";
 import { SideBar } from "../../components/sidebar/SideBar";
 import { NavBar } from "../../components/navbar/NavBar";
-import {Chart} from "../../components/chart/Chart"
-import {Table} from "../../components/table/Table"
+import { Chart } from "../../components/chart/Chart";
+import { Table } from "../../components/table/Table";
 export const Single = () => {
   return (
     <div className="single">
@@ -48,7 +48,6 @@ export const Single = () => {
         </div>
         <div className="bottom">
           <h1 className="title">Last Transactions</h1>
-
           <Table />
         </div>
       </div>
