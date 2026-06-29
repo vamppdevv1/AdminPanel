@@ -19,14 +19,19 @@
         position: relative;
 
         .editButton {
+          display: flex;
+          align-items: center;
+          justify-content: center;
           position: absolute;
           right: 0;
           top: 0;
           padding: 5px;
           font-size: 13px;
           color: #1e104e;
+          width: 30px;
+          height: 20px;
           background-color: #1e104e1a;
-          border-radius: 10px;
+          border-radius: 0px 10px 0px 10px;
           cursor: pointer;
         }
         .item {
@@ -65,7 +70,6 @@
     }
     .bottom{
       padding: 20px;
-      
     }
   }
   .title {
