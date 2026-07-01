@@ -17,12 +17,13 @@
   .status {
     padding: 5px;
     border-radius: 5px;
+    font-weight: bold;
     &.Approved {
-      color: green;
+      color: rgb(0, 209, 0);
       background-color: rgba(23, 209, 23, 0.323);
     }
     &.Pending {
-      color: goldenrod;
+      color: rgb(159, 114, 0);
       background-color: rgba(245, 186, 39, 0.322);
     }
   }
