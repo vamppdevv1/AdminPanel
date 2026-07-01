@@ -16,11 +16,10 @@ import {
   LightMode,
 } from "@mui/icons-material";
 import { Link } from "react-router-dom";
-import { useDispatch,useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import { toggle } from "../../features/darkmode/darkmodeSlice";
 
 export const SideBar = () => {
-  const darkMode = useSelector((state) => state.darkMode.darkMode);
   const dispatch = useDispatch()
   return (
     <div className="sidebar">

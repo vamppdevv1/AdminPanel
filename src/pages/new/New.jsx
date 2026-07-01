@@ -50,7 +50,6 @@ export const New = ({ inputs, title }) => {
                   </div>
                 );
               })}
-
               <button>send</button>
             </form>
           </div>
