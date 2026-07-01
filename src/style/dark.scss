@@ -1,0 +1,52 @@
+.app.dark {
+  background-color: #222;
+  color: rgb(156, 156, 156);
+.widget,.chart,.featured , .listContainer{
+        -webkit-box-shadow: -1px 2px 11px 0px #ffffff;
+  box-shadow: -1px 2px 11px 0px #ffffff;
+}
+  .table {
+    background-color: #222;
+    .tableCell {
+      color: gray;
+    }
+  }
+  .navbar {
+    color: #999;
+  }
+  .sidebar {
+    background-color: #222;
+    .top {
+      .logo {
+        color: #999;
+      }
+    }
+    ul {
+      li {
+        &:hover {
+          background-color: #333;
+        }
+        .icon {
+          color: #999;
+        }
+      }
+    }
+  }
+  .datatable {
+    .MuiDataGrid-columnHeader,
+    .MuiDataGrid-filler,
+    .MuiDataGrid-root,
+    .MuiDataGrid-row {
+      background-color: #222;
+      &:hover {
+        background-color: #222;
+      }
+    }
+  }
+  .datagrid {
+    color: gray;
+  }
+  input{
+    background-color: transparent;
+  }
+}
