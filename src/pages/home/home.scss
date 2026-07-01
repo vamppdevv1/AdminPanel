@@ -17,9 +17,7 @@
         .charts {
           display: flex;
           flex-direction: column;
-
         }
-
       }
     }
     .charts {
@@ -46,4 +44,8 @@
     flex-direction: column;
   }
 }
-
+@media (max-width: 550px) {
+  .chart {
+    display: none;
+  }
+}

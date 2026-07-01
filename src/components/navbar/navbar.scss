@@ -1,5 +1,4 @@
 .navbar {
-
   height: 50px;
   border-bottom: 2px solid rgb(227, 227, 227);
   display: flex;
@@ -17,17 +16,23 @@
       border: 0.5px solid lightgrey;
       border-radius: 10px;
       padding: 4px;
+      @media (max-width: 400px) {
+        .icon {
+          display: none;
+        }
+        min-width: 0;
+      }
       input {
         border: none;
         outline: none;
         background-color: transparent;
         &::placeholder {
           font-size: 12px;
-         padding-left: 2px;
+          padding-left: 2px;
         }
       }
     }
-   
+
     .items {
       display: flex;
       align-items: center;
@@ -37,39 +42,39 @@
         display: flex;
         align-items: center;
         position: relative;
-        &:nth-child(1){
+        &:nth-child(1) {
           gap: 5px;
         }
         .icon {
           font-size: 20px;
           cursor: pointer;
         }
-        .avatar{
-            width: 30px;
-            height: 30px;
-            border-radius: 50%;
+        .avatar {
+          width: 30px;
+          height: 30px;
+          border-radius: 50%;
         }
-        .counter{
-            background-color: red;
-            width: 15px;
-            height: 15px;
-            border-radius: 50%;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 10px;
-            font-weight: bolder;
-            position: absolute;
-            top: -5px;
-            right: -5px;
+        .counter {
+          background-color: red;
+          width: 15px;
+          height: 15px;
+          border-radius: 50%;
+          color: white;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          font-size: 10px;
+          font-weight: bolder;
+          position: absolute;
+          top: -5px;
+          right: -5px;
         }
       }
     }
   }
 }
-  @media(max-width:1000px){
-     .navbar .wrapper .items .item {
+@media (max-width: 1000px) {
+  .navbar .wrapper .items .item {
     display: none;
   }
-     }
+}
