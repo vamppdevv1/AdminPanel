@@ -6,11 +6,9 @@ import { Single } from "./pages/single/Single";
 import { New } from "./pages/new/New";
 import { userInputs, productInputs } from "./pages/new/formSource";
 import "./style/dark.scss";
-import { DarkModeContext } from "./context/darkModeContext.jsx";
-import { useContext } from "react";
+import { useSelector } from "react-redux";
 function App() {
-const {darkMode} = useContext(DarkModeContext)
-
+const darkMode = useSelector((state) => state.darkMode.darkMode);
   return (
     <div className={darkMode ? "app dark" : 'app'}>
       <BrowserRouter>

@@ -25,8 +25,8 @@ export const Chart = ({aspect , title}) => {
           data={data}
           margin={{ top: 10, right: 30, left: 0, bottom: 0 }}
         >
-          <XAxis dataKey="name" />
-          <CartesianGrid strokeDasharray="3 3" />
+          <XAxis dataKey="name"/>
+          <CartesianGrid strokeDasharray="3 3"/>
           <Tooltip />
           <ReferenceLine x="Page C" stroke="green" label="Min PAGE" />
           <ReferenceLine
