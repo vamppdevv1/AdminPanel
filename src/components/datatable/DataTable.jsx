@@ -2,27 +2,37 @@ import "./datatable.scss";
 import { DataGrid } from "@mui/x-data-grid";
 import { userRows, userColumns } from "./datatablesource.jsx";
 import { Link } from "react-router-dom";
-const actionColumn = [
-  {
-    field: "action",
-    headerName: "Action",
-    width: "200",
-    renderCell: () => {
-      return (
-        <>
-          <Link to="/users/123" style={{ textDecoration: "none" }}>
-            <div className="cellAction">
-              <div className="viewButton">View</div>
-              <div className="deleteButton">delete</div>
-            </div>
-          </Link>
-          ;
-        </>
-      );
-    },
-  },
-];
+import { useState } from "react";
 export const DataTable = () => {
+  const [data, setData] = useState(userRows);
+  const handleDelete = (id) => {
+    setData(data.filter((i) => i.id !== id));
+  };
+  const actionColumn = [
+    {
+      field: "action",
+      headerName: "Action",
+      width: "200",
+      renderCell: (params) => {
+        return (
+          <>
+            <div className="cellAction">
+              <Link to="/users/123" style={{ textDecoration: "none" }}>
+                <div className="viewButton">View</div>
+              </Link>
+              <div
+                className="deleteButton"
+                onClick={() => handleDelete(params.row.id)}
+              >
+                delete
+              </div>
+            </div>
+            ;
+          </>
+        );
+      },
+    },
+  ];
   return (
     <div className="datatable">
       <div className="datatableTitle">
@@ -32,7 +42,8 @@ export const DataTable = () => {
         </Link>
       </div>
       <DataGrid
-        rows={userRows}
+        className="datagrid"
+        rows={data}
         columns={userColumns.concat(actionColumn)}
         pageSizeOptions={[5, 10]}
         checkboxSelection

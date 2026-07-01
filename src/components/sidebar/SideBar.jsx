@@ -15,8 +15,12 @@ import {
   DarkMode,
   LightMode,
 } from "@mui/icons-material";
+import { DarkModeContext } from "../../context/darkModeContext.jsx";
+import { useContext } from "react";
 import { Link } from "react-router-dom";
 export const SideBar = () => {
+  const {dispatch} = useContext(DarkModeContext)
+  
   return (
     <div className="sidebar">
       <div className="top">
@@ -87,10 +91,16 @@ export const SideBar = () => {
         </ul>
       </div>
       <div className="bottom">
-        <div className="colorOption">
+        <div
+          className="colorOption"
+          onClick={() => dispatch({ type: "DARK" })}
+        >
           <DarkMode />
         </div>
-        <div className="colorOption">
+        <div
+          className="colorOption"
+          onClick={() => dispatch({ type: "LIGHT" })}
+        >
           <LightMode />
         </div>
       </div>
