@@ -7,13 +7,13 @@ import {
   NotificationsNoneOutlined,
   ChatBubbleOutlineOutlined,
   ListOutlined,
-  LightModeOutlined
+  LightModeOutlined,
 } from "@mui/icons-material";
-import { useContext } from "react";
-import { DarkModeContext } from "../../context/darkModeContext.jsx";
-
+import { useSelector, useDispatch } from "react-redux";
+import { toggle } from "../../features/darkmode/darkmodeSlice";
 export const NavBar = () => {
-  const { dispatch } = useContext(DarkModeContext);
+  const darkMode = useSelector((state) => state.darkMode.darkMode);
+  const dispatch = useDispatch();
 
   return (
     <div className="navbar">
@@ -28,15 +28,15 @@ export const NavBar = () => {
             English
           </div>
           <div className="item">
-            {DarkModeContext._currentValue.darkMode ? (
+            {darkMode ? (
               <DarkModeOutlined
                 className="icon"
-                onClick={() => dispatch({ type: "TOGGLE" })}
+                onClick={() => dispatch(toggle())}
               />
             ) : (
               <LightModeOutlined
                 className="icon"
-                onClick={() => dispatch({ type: "TOGGLE" })}
+                onClick={() => dispatch(toggle())}
               />
             )}
           </div>
