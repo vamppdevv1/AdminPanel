@@ -24,25 +24,42 @@
     .featuredChart {
       width: 200px;
       height: 200px;
+        @media (max-width: 450px) {
+
+       width: auto;
+       height: auto;
+      }
     }
     .title {
       font-weight: 500;
       color: gray;
+      @media (max-width: 450px) {
+        display: none;
+      }
     }
     .amount {
       font-size: 30px;
+      @media (max-width: 450px) {
+        display: none;
+      }
     }
     .desc {
       font-weight: 300;
       font-size: 14px;
       color: gray;
       text-align: center;
+      @media (max-width: 450px) {
+        display: none;
+      }
     }
     .summary {
       width: 100%;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      @media (max-width: 450px) {
+        display: none;
+      }
       .item {
         text-align: center;
         .itemTitle {
