@@ -60,7 +60,11 @@ const rows = [
 ];
 export const Table = () => {
   return (
-    <TableContainer component={Paper} className="table">
+    <TableContainer
+      sx={{ overflowX: "auto" }}
+      component={Paper}
+      className="table"
+    >
       <MuiTable aria-label="simple table">
         <TableHead>
           <TableRow>

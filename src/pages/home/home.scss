@@ -3,12 +3,22 @@
   flex-direction: row;
   .homeContainer {
     flex: 6;
+    min-width: 0;
     .widgets,
     .charts {
       display: flex;
       padding: 20px;
       gap: 30px;
       margin-bottom: 5px;
+      @media (max-width: 1000px) {
+        display: grid;
+        grid-template-columns: 1fr;
+        min-width: 0;
+        .charts {
+          display: flex;
+          flex-direction: column;
+        }
+      }
     }
     .charts {
       padding: 5px 20px;
@@ -28,4 +38,9 @@
     }
   }
 }
-
+@media (max-width: 1000px) {
+  .charts {
+    display: flex;
+    flex-direction: column;
+  }
+}
