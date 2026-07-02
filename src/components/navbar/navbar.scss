@@ -15,6 +15,7 @@
       display: flex;
       min-width: 0;
       flex: 1;
+      max-width: 50%;
       align-items: center;
       border: 0.5px solid lightgrey;
       border-radius: 10px;
@@ -75,5 +76,10 @@
 @media (max-width: 1000px) {
   .navbar .wrapper .items .item {
     display: none;
+  }
+  .navbar .wrapper {
+   justify-content: center;
+   align-items: center;
+
   }
 }

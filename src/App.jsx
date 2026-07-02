@@ -17,7 +17,7 @@ const darkMode = useSelector((state) => state.darkMode.darkMode);
             <Route index element={<Home />} />
             <Route path="login" element={<Login />} />
             <Route path="users">
-              <Route index element={<List />} />
+              <Route index element={<List type="users" />} />
               <Route path=":userId" element={<Single />} />
               <Route
                 path="new"
