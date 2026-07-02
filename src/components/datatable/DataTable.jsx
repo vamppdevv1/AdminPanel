@@ -8,27 +8,26 @@ export const DataTable = () => {
   const handleDelete = (id) => {
     setData(data.filter((i) => i.id !== id));
   };
- const actionColumn = [
-   {
-     field: "action",
-     headerName: "Action",
-     width: 180,
-     renderCell: (params) => (
-       <div className="cellAction">
-         <Link to="/users/123" style={{ textDecoration: "none" }}>
-           <div className="viewButton">View</div>
-         </Link>
-
-         <div
-           className="deleteButton"
-           onClick={() => handleDelete(params.row.id)}
-         >
-           Delete
-         </div>
-       </div>
-     ),
-   },
- ];
+  const actionColumn = [
+    {
+      field: "action",
+      headerName: "Action",
+      width: 180,
+      renderCell: (params) => (
+        <div className="cellAction">
+          <Link to="/users/123" style={{ textDecoration: "none" }}>
+            <div className="viewButton">View</div>
+          </Link>
+          <div
+            className="deleteButton"
+            onClick={() => handleDelete(params.row.id)}
+          >
+            Delete
+          </div>
+        </div>
+      ),
+    },
+  ];
   return (
     <div className="datatable">
       <div className="datatableTitle">
