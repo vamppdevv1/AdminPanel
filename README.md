@@ -1,16 +1,147 @@
-# React + Vite
+# React Admin Panel Dashboard
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern and responsive admin dashboard built with React. This project focuses on creating a clean dashboard experience with reusable components, data visualization, tables, forms, routing, and theme management.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Responsive admin dashboard layout
+- React Router navigation
+- Sidebar navigation menu
+- Top navigation bar
+- Reusable dashboard widgets
+- Dashboard statistics cards
+- Data tables and reusable table components
+- Charts and data visualization
+- User details page
+- User creation form
+- Dark mode support
+- Redux Toolkit state management
+- Responsive design across different screen sizes
 
-## React Compiler
+## Tech Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Frontend
 
-## Expanding the ESLint configuration
+- React
+- React Router DOM
+- Redux Toolkit
+- Material UI
+- Recharts
+- CSS3
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Project Structure
+
+```
+src/
+├── app/
+│   └── Redux store configuration
+│
+├── features/
+│   └── Dark mode state management
+│     
+│
+├── components/
+│   ├── chart/
+│   ├── datatable/
+│   ├── featured/
+│   ├── navbar/
+│   ├── sidebar/
+│   ├── table/
+│   └── widget/
+│
+├── pages/
+│   ├── home/
+│   ├── list/
+│   ├── new/
+│   └── single/
+│
+└── style/
+```
+
+## Installation
+
+Clone the repository:
+
+```bash
+git clone <repository-url>
+```
+
+Navigate to the project folder:
+
+```bash
+cd AdminPanel
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Run the development server:
+
+```bash
+npm run dev
+```
+
+The application will run locally using the Vite development server.
+
+## Pages
+
+### Dashboard
+
+Includes:
+
+- Overview statistics
+- Charts
+- Dashboard widgets
+- Data visualization
+- Recent activity sections
+
+### Users
+
+Includes:
+
+- Users table
+- User details page
+- User creation form
+
+## Dark Mode
+
+The application includes a dark mode system managed with Redux Toolkit.
+
+The theme state is handled globally, allowing components to update consistently across the application.
+
+## Responsive Design
+
+The dashboard is optimized for:
+
+- Desktop screens
+- Tablets
+- Mobile devices
+
+Layouts and components adapt automatically to different screen sizes.
+
+## Development Goals
+
+This project demonstrates:
+
+- React component architecture
+- Redux Toolkit state management
+- Reusable UI components
+- Dashboard layout development
+- Data visualization
+- Responsive frontend development
+- Managing global application state
+
+## Future Improvements
+
+- Add authentication and authorization
+- Add role-based permissions
+- Add advanced filtering and searching
+- Add more analytics features
+- Expand user management features
+
+## License
+
+This project is for learning and portfolio purposes.
